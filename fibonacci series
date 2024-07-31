@@ -1,0 +1,35 @@
+#include <stdio.h>
+
+int main() {
+    int n1 = 0, n2 = 1, n3, i, num;
+
+    // Ask user for the number of elements
+    printf("Number of elements: ");
+    scanf("%d", &num);
+
+    // Validate input
+    if (num < 1) {
+        printf("Please enter a positive number.\n");
+        return 1;
+    }
+
+    // Print the first element if num is 1
+    if (num == 1) {
+        printf("%d\n", n1);
+        return 0;
+    }
+
+    // Print the first two elements of the Fibonacci sequence
+    printf("%d %d", n1, n2);
+
+    // Generate the Fibonacci sequence up to the specified number
+    for (i = 2; i < num; ++i) {
+        n3 = n1 + n2;
+        printf(" %d", n3);
+        n1 = n2;
+        n2 = n3;
+    }
+
+    printf("\n"); // Print a newline at the end
+    return 0;
+}
