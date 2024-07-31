@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+int main() {
+    int num[10], i;
+
+    // Input: Reading 10 numbers from the user
+    printf("Enter 10 numbers: ");
+    for(i = 0; i < 10; i++) {
+        scanf("%d", &num[i]);
+    }
+
+    // Output: Display even numbers
+    printf("\nEven numbers are:\n");
+    for(i = 0; i < 10; i++) {
+        if(num[i] % 2 == 0) {
+            printf("%d ", num[i]);
+        }
+    }
+
+    // Output: Display odd numbers
+    printf("\nOdd numbers are:\n");
+    for(i = 0; i < 10; i++) {
+        if(num[i] % 2 != 0) {
+            printf("%d ", num[i]);
+        }
+    }
+
+    printf("\n"); // Ensuring the program ends with a newline
+    return 0;
+}
